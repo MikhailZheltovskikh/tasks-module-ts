@@ -4,11 +4,11 @@
 interface IPrise {
     price: number;
     discount: number;
-    isInstallment: boolean;
-    months: number;
+    isInstallment?: boolean;
+    months?: number;
 }
 
-const totalPrice = ({ price, discount, isInstallment, months }: IPrise): number => {
+const totalPrice = ({ price, discount, isInstallment = false, months = 0 }: IPrise): number => {
     const sum: number = price - (price / 100) * discount;
 
     if (isInstallment) {
