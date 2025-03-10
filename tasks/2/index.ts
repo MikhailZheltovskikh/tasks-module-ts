@@ -13,11 +13,16 @@ interface IPosts {
     body: string;
 }
 
+interface INormalizeData {
+    byId: { [key: string]: IPosts };
+    allIds: string[];
+}
+
 const posts: IPosts[] = [
     {
         id: '62e69d5a5458aac0ed320b35',
         title: 'id labore ex et quam laborum',
-        body: 'laudantium enim quasi est quidem magnam voluptate ipsam eostempora quo necessitatibusdolor quam autem quasireiciendis et nam sapiente accusantium',
+        body: 'eostempora quo necessitatibusdolor quam autem quasireiciendis et nam sapiente accusantium',
     },
     {
         id: '62e69d5a5458aac0ed320b1c',
@@ -50,11 +55,6 @@ const posts: IPosts[] = [
         body: 'maiores sed dolores similique labore et inventore etquasi temporibus esse sunt id eteos voluptatem aliquamratione corporis molestiae mollitia quia et magnam dolor',
     },
 ];
-
-interface INormalizeData {
-    byId: { [key: string]: IPosts };
-    allIds: string[];
-}
 
 const normalizeData = (unnormalizedData: IPosts[]): INormalizeData => {
     let res: INormalizeData = {
