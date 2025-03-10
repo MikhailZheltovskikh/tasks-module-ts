@@ -1,5 +1,12 @@
 // Напишите и типизируйте функцию, нормализующую входящие данные:
-
+// 
+// interface IPosts {
+//     id: string;
+//     title: string;
+//     body: string;
+// }
+// 
+// 
 interface IPosts {
     id: string;
     title: string;
